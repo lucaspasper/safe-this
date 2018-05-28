@@ -23,6 +23,14 @@ class AdminController extends MainController
         $this->model->places = count($this->model->places);
         $this->model->users = count($this->model->users);
         $parameters = (func_num_args() >= 1 ) ? func_get_arg(0) : array();
+
+        $this->model->dataPoints = array(
+        array("y" => 7, "label" => "JAN- MARÇ"),
+        array("y" => 12,"label" => "ABR-JUNH"),
+        array("y" => 28,"label" => "JULH-SET"),
+        array("y" => 18,"label" => "OUT-DEZ")
+        );
+
         $this->load_page('admin/index.php');
     }
 }
